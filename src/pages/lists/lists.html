@@ -1,0 +1,68 @@
+<!--
+  Generated template for the ListsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>lists</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+<ion-list>
+  <ion-item>    <ion-icon name="star"></ion-icon>    ion-item</ion-item>
+  <ion-item>    <h1>header</h1>
+    <p>    ion-item p  </p>  <ion-icon name="star"></ion-icon>
+
+  </ion-item>
+  <ion-item >    <ion-icon name="star" item-left></ion-icon>    ion-item item-left</ion-item>
+  <ion-item >    <ion-icon name="star" item-right></ion-icon>    ion-item item-right</ion-item>
+  <button ion-item>button ion-item</button>
+</ion-list>
+  <span>no ion-list</span>
+  <ion-icon name="arrow-round-down"></ion-icon>
+  <ion-item>ion-item</ion-item>
+  <button ion-item>button ion-item</button>
+
+
+  <span>config list</span>
+  <ion-icon name="arrow-round-down"></ion-icon>
+  <ion-list no-lines indet>
+    <ion-item>a</ion-item>
+    <ion-item>b</ion-item>
+    <ion-item>c</ion-item>
+  </ion-list>
+
+  <span>more features</span>
+  <ion-icon  name="arrow-round-down"></ion-icon>
+  <ion-list>
+    <ion-item-group>
+      <ion-item-divider>A</ion-item-divider>
+      <ion-item>Apple</ion-item>
+      <ion-item>Avocados</ion-item>
+      <ion-item-divider>O</ion-item-divider>
+      <ion-item>Orange</ion-item>
+      <ion-item>Oregano</ion-item>
+    </ion-item-group>
+
+  </ion-list>
+  <span>more features</span>
+  <ion-icon  name="arrow-round-down"></ion-icon>
+  <ion-list>
+    <ion-list-header>ion-list-header</ion-list-header>
+    <ion-item>ion-item</ion-item>
+    <ion-item>ion-item</ion-item>
+  </ion-list>
+
+  <span>re-orderable List</span>
+  <ion-icon  name="arrow-round-down"></ion-icon>
+  <ion-list reorder="true" (ionItemReorder)="reorderItems($event)">
+    <ion-item *ngFor="let item of items">{{item}}</ion-item>
+  </ion-list>
+</ion-content>
