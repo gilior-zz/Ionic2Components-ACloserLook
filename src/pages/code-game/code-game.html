@@ -1,0 +1,52 @@
+<!--
+  Generated template for the CodeGamePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>code-game</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col text-center>
+        <h2>enter the right code</h2>
+        <p *ngIf="!won">tap twice, press 4 times</p>
+        <p *ngIf="won">u won</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-list>
+        <ion-item>
+          <p>
+            tapped: {{tapCounter}}
+          </p>
+        </ion-item>
+        <ion-item>
+          <p>
+            pressed: {{pressCounter}}
+          </p>
+        </ion-item>
+      </ion-list>
+    </ion-row>
+
+      <btns-game (onAll)="resetAll()" (onTaps)="resetTaps()" (onPress)="resetPress()"></btns-game>
+
+    <ion-row>
+      <ion-col  ion-button  color="secondary" (click)="tapCounter=tapCounter+1">
+        tap here
+      </ion-col>
+      <ion-col  ion-button color="secondary" (press)="pressCounter=pressCounter+1">
+       press here
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+</ion-content>
